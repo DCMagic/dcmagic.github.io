@@ -20,7 +20,7 @@
   <meta name="keywords" content="" />
   <meta name="description" content="D.youma" />
 	<!-- favicon -->
-  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.png">
 
   <!-- css -->
   
@@ -35,10 +35,10 @@
 <script>
     const CONFIG_BGIMAGE = {
       mode: 'normal',
-      normalSrc: '/img/header-bg.jpg',
+      normalSrc: '/img/bg_photo/02.jpg',
       randomYouMax: 110,
-      randomYouSrc: 'https://sariay.github.io/Random-img/',
-	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+      randomYouSrc: '/img/bg_photo',
+	  randomOtherSrc: '/',
 	  preloaderEnable: true
     }
 	
@@ -154,6 +154,10 @@
 		
 	
 
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
 	
 </ul>
 	</div>
@@ -308,13 +312,17 @@
 	
 
 	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
 </ul>
 	</div>
 
 	<div class="copyright">
 		<p>
 			 
-				&copy;2017 - 2020, content by Sariay. All Rights Reserved.
+				&copy;2018 - 2020, content by DCMagic. All Rights Reserved.
 			
 			
 				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
@@ -405,6 +413,56 @@
 	
 
   
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
 
 
 
